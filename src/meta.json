@@ -1,0 +1,91 @@
+{
+    "display_in_contextmenu": true,
+    "hotkey_notetypes":"Alt+q",
+    "hotkey_decks":"Alt+w",
+    "menu_keyalt_for_arrow_down": "b",
+    "menu_keyalt_for_arrow_up": "g",
+    "menu_keyalt_for_arrow_left": "t",
+    "menu_keyalt_for_arrow_right": "",
+    "menu_keyalt_for_return": "space",
+    "quick_decks":[
+            {
+                "label": "Comp",
+                "name": "00::000aktuell::Computer::Computer_div"
+            },
+            {
+                "label": "IR",
+                "name": "000::000aktuell::IR"
+            }, 
+            {
+                "label": "ich",
+                "name": "00::000aktuell::Erinnerung,privat,meta"
+            },
+            {
+                "label": "eng",
+                "name": "00::000aktuell::Sprachen::englisch"
+            }, 
+            {
+                "label": "rest",
+                "name": "00::000aktuell::rest"
+            },
+            [
+                {
+                    "label": "jura"
+                }, 
+                {
+                    "label": "bgb_at",
+                    "name": "caktuell::zJura::Zivil::1_AT"
+                }, 
+                {
+                    "label": "bgb_srbt",
+                    "name": "caktuell::zJura::Zivil::3_SRBT"
+                }, 
+                {
+                    "label": "bgb_sar",
+                    "name": "caktuell::zJura::Zivil::4_SaR"
+                }, 
+                {
+                    "label": "straf_AT",
+                    "name": "caktuell::zJura::Straf::AT"
+                }, 
+                {
+                    "label": "straf_BT",
+                    "name": "caktuell::zJura::Straf::BT"
+                }, 
+                {
+                    "label": "StPO",
+                    "name": "caktuell::zJura::Straf::StPO"
+                }, 
+                {
+                    "label": "GR",
+                    "name": "caktuell::zJura::ÖR::Grundrechte"
+                }
+            ]
+        ],
+    "quick_notetypes": [
+        {
+            "label": "00000",
+            "name": "-00"
+        }, 
+        {
+            "label": "IR",
+            "name": "-00ir"
+        }, 
+        {
+            "label": "FFF-n",
+            "name": "-00_mul_FF_n"
+        },
+        {
+            "label": "cloze",
+            "name": "-00_cloze"
+        }, 
+        {
+            "label": "CloHA",
+            "name": "Cloze (Hide all)"
+        }, 
+        {
+            "label": "CloOV",
+            "name": "Cloze (overlapping)"
+        }
+    ]
+}

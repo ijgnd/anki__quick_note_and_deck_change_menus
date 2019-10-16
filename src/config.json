@@ -1,0 +1,74 @@
+{
+    "display_in_contextmenu": true,
+    "hotkey_notetypes":"Alt+q",
+    "hotkey_decks":"Alt+w",
+    "menu_use_alternative_keys_for_navigation":true,
+    "menu_keyalt_for_arrow_down": "j",
+    "menu_keyalt_for_arrow_up": "k",
+    "menu_keyalt_for_arrow_left": "h",
+    "menu_keyalt_for_arrow_right": "l",
+    "menu_keyalt_for_return": "space",
+    "quick_decks":[
+        {
+            "label": "Deck1",
+            "name": "Deck1"
+        },
+        {
+            "label": "Deck 2",
+            "name": "Deck 2"
+        },
+        [
+            {
+                "label": "some subdecks"
+            },
+            {
+                "label": "Subdeck 1",
+                "name": "Deck 3::Subdeck 1"
+            },
+            [
+                {
+                    "label": "even more nested subdecks"
+                },
+                {
+                    "label": "Deck 3::Subdeck 2",
+                    "name": "Deck 3::Subdeck 2"
+                },
+                {
+                    "label": "Deck 3::Subdeck 3",
+                    "name": "Deck 3::Subdeck 3"
+                }        
+            ],
+            {
+                "label": "Deck 3::Subdeck 4",
+                "name": "Deck 3::Subdeck 4"
+            }
+        ]
+    ],
+    "quick_notetypes": [
+        {
+            "label": "B&asic",
+            "name": "Basic"
+        },
+        {
+            "label": "Cloz&e",
+            "name": "Cloze"
+        },
+        [
+            {
+                "label": "other &basic"
+            },
+            {
+                "label": "Basic (and &reversed card)",
+                "name": "Basic (and reversed card)"
+            },
+            {
+                "label": "Basic (optional reversed &card)",
+                "name": "Basic (optional reversed card)"
+            },
+            {
+                "label": "Basic (&type in the answer)",
+                "name": "Basic (type in the answer)"
+            }
+        ]
+    ]
+}
