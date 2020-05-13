@@ -45,9 +45,7 @@ QMenu::item:selected {
 #  in modelchooser self.deck is mw.col !
 def change_note_type(self, new):
     current = self.mw.col.models.current()["name"]
-    print(f"in change_note_type and current is: {current}")
     m = self.mw.col.models.byName(new)
-    print(f"in change_note_type and m is: {m}")
     if not m:
         msg = f"Can't select the notetype '{new}'. Do you really have a notetype with this name?"
         tooltip(msg)
@@ -56,7 +54,6 @@ def change_note_type(self, new):
     cdeck = mw.col.decks.current()
     cdeck['mid'] = m['id']
     self.mw.col.decks.save(cdeck)
-    print(f"keepModel is {keepModel}")
     if not keepModel:
         gui_hooks.current_note_type_did_change(current)
         self.modelChooser.mw.reset()
