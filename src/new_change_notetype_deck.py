@@ -41,23 +41,31 @@ QMenu::item:selected {
 }
 """
 
-
+# adapted from modelchooser.onModelChange
+#  in modelchooser self.deck is mw.col !
 def change_note_type(self, new):
+    current = self.mw.col.models.current()["name"]
+    print(f"in change_note_type and current is: {current}")
     m = self.mw.col.models.byName(new)
+    print(f"in change_note_type and m is: {m}")
     if not m:
-        msg = "Can't select the notetype '%s'. Do you really have a notetype with this name?" % new
+        msg = f"Can't select the notetype '{new}'. Do you really have a notetype with this name?"
         tooltip(msg)
         return
     self.mw.col.conf['curModel'] = m['id']
     cdeck = mw.col.decks.current()
     cdeck['mid'] = m['id']
     self.mw.col.decks.save(cdeck)
+    print(f"keepModel is {keepModel}")
     if not keepModel:
-        runHook("currentModelChanged")
+        gui_hooks.current_note_type_did_change(current)
         self.modelChooser.mw.reset()
     else:  # Add-on 424778276 "Keep model of add cards" is installed
-        self.onModelChange()
         self.modelChooser.updateModels()
+        gui_hooks.current_note_type_did_change(m)
+        self.modelChooser.parent.onModelChange()
+        self.modelChooser.updateModels()
+        self.modelChooser.parent.setAndFocusNote(self.modelChooser.parent.note)
 
 
 def change_deck_to(self, deck_name):
@@ -201,7 +209,8 @@ AddCards.__init__ = wrap(AddCards.__init__, afterinit, "after")
 def onload():
     global keepModel
     try:
-        __import__("424778276").keepModelInAddCards
+        # __import__("424778276").keepModelInAddCards # Keep Model of Add Cards before 2020-04
+         __import__("424778276").modelChooser.ModelChooser
     except:
         keepModel = False
     else:
