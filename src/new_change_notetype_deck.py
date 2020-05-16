@@ -62,7 +62,7 @@ def change_note_type(self, new):
         gui_hooks.current_note_type_did_change(m)
         self.modelChooser.parent.onModelChange()
         self.modelChooser.updateModels()
-        self.modelChooser.parent.setAndFocusNote(self.modelChooser.parent.note)
+        self.modelChooser.parent.setAndFocusNote(self.modelChooser.parent.editor.note)
 
 
 def change_deck_to(self, deck_name):
